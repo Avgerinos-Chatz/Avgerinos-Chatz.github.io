@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Οι Πιτες του Πιτου</title>
+</head>
+
+<body>
+
+    <header>
+        <h2><a href="index.html">Οι Πίτες του Πίτου</a></h2>
+        <p>Πάρε μια πίτα</p>
+        <nav>
+            <ul>
+                <li><a href="store.html">Κατάστημα</a></li>
+                <li><a href="pies.html">Πίτες</a></li>
+                <li><a href="contact.html">Επικοινωνία</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Οι Πιτες</h1>
+        <article>
+            <h2>Οι Πίτες μας</h2>
+            <table>
+                <tr>
+                    <td><img src="../images/spanakopita.jpg" alt="spanakopita" height="100" width="100"></td>
+                    <td>Σπανακόπιτα</td>
+                    <td>4&euro;</td>
+                </tr>
+                <tr>
+                    <td><img src="../images/manitaropita-me-kremmydi-praso-kai-bacon-image-794x861.jpg"
+                            alt="manitaropita" height="100" width="100"></td>
+                    <td>Μανιταρόπιτα</td>
+                    <td>5.5&euro;</td>
+                </tr>
+                <tr>
+                    <td><img src="../images/prasopita-720x540.jpg" alt="prasopita" height="100" width="100"></td>
+                    <td>Πρασόπιτα</td>
+                    <td>3.5&euro;</td>
+                </tr>
+                <tr>
+                    <td><img src="../images/xaniotiko-mpoureki-960x960.jpg" alt="mpouraki" height="100" width="100">
+                    </td>
+                    <td>Μπουρέκι</td>
+                    <td>4.5&euro;</td>
+                </tr>
+            </table>
+        </article>
+        <article>
+            <h2>Οι πίτες μας στον χώρο σας!</h2>
+            <p>Ωράριο λήψης παραγγελιών (18:00-22:00)</p>
+            <form action="/sendData" method="POST">
+                <fieldset>
+                    <legend>
+                        Πληροφορίες παράδοσης:
+                    </legend>
+                    <label for="txtName">Ονοματεπώνυμο:*</label>
+                    <input type="text" id="txtName" name="Name" minlength="3" maxlength="30" required>
+                    <br>
+                    <label for="txtAddress">Διεύθυνση(Οδός-Αριθμός):*</label>
+                    <input type="text" id="txtAddress" name="Address" required>
+                    <br>
+                    <label for="txtRegion">Περιοχή:</label>
+                    <select id="txtRegion" name="Region">
+                        <option value="Evosmos" selected>Εύοσμος</option>
+                        <option value="Kalamaria">Καλαμαριά</option>
+                        <option value="DownTown">Κέντρο</option>
+                        <option value="Ampelokipoi">Αμπελόκηποι</option>
+                    </select>
+                    <br>
+                    <label for="txtEmail">Email:</label>
+                    <input type="email" id="txtEmail" name="email">
+                    <br>
+                    <label for="txtTel">Τηλέφωνο:*</label>
+                    <input type="tel" id="txtTel" name="pone" required>
+                    <br>
+                    <label for="txtMessage">Ειδικές πληροφορίες για την παράδοση:</label>
+                    <textarea id="txtMessage" name="message" rows="6" cols="40"></textarea>
+                    <br>
+                    Τα πεδία με (*) είναι υποχρεωτικά
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Παραγγελία:
+                    </legend>
+                    <ul>
+                        <li>
+                            <label for="txtSpanakopita">Σπανακόπιτες</label>
+                            <input type="number" id="txtSpanakopita" name="spanakopita" max="100" min="0" value="0">
+                        </li>
+                        <li>
+                            <label for="txtManitaropita">Μανιταρόπιτες</label>
+                            <input type="number" id="txtManitaropita" name="manitaropita" max="100" min="0" value="0">
+                        </li>
+                        <li>
+                            <label for="txtPrasopita">Πρασόπιτες</label>
+                            <input type="number" id="txtPrasopita" name="prasopita" max="100" min="0" value="0">
+                        </li>
+                        <li>
+                            <label for="txtMpoureki">Μπουρέκια</label>
+                            <input type="number" id="txtMpoureki" name="mpoureki" max="100" min="0" value="0">
+                        </li>
+                    </ul>
+                    <input type="checkbox" id="chkOffer" name="offer" value="offer-on">
+                    <label for="chkOffer">Ενσωμάτωση προσφοράς στις 10 πίτες η 1 δώρο</label>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Τρόπος πληρωμής:
+                    </legend>
+                    <input type="radio" id="rdVISA" name="payment" value="VISA">
+                    <label for="rdVISA">VISA</label>
+                    <input type="radio" id="rdCash" name="payment" value="Cash" checked>
+                    <label for="rdCash">Μετρητά</label>
+                    <input type="radio" id="rdCredit" name="payment" value="credit">
+                    <label for="rdCredit">Πίστωση</label>
+                    <br>
+                </fieldset>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+        </article>
+    </main>
+
+    <aside>
+        <h2>Προσφορές</h2>
+        <p>Giveaway 1</p>
+        <p>Στις 10 η 1 δώρο</p>
+    </aside>
+
+    <footer>
+        <p>&copy;Οι Πίτες του Πίτου 2025</p>
+    </footer>
+
+</body>
+
+
+</html>
